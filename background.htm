@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>AC 297r Boston Globe Capstone Project Website</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="./bootstrap-3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- Bootstrap core CSS -->
+		<link href="./bootstrap-3.3.1/css/bootstrap.icon-large.min.css" rel="stylesheet">
+		
+		<!-- Custom styles for the homepage -->
+		<link href="./css/main.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		    <!--[if lt IE 9]>
+		      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		        <![endif]-->
+	</head>
+	
+<body>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+      <a class="navbar-brand" href="./index.htm">Boston Globe Subscriber Conversion</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="./background.htm">BACKGROUND</a></li>
+        <li><a href="./data.htm">DATA</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ANALYSIS <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="./descriptive_analysis.htm">DESCRIPTIVE ANALYSIS</a></li>
+					<li><a href="./predictive_models.htm">PREDICTIVE MODELS</a></li>
+				</ul>
+		</li>
+        <li><a href="./next_steps.htm">NEXT STEPS</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="./about_us.htm">ABOUT THE AUTHORS</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<!-- Collapsible Bar -->
+<!-- Add Padding -->
+  </br>
+  </br>
+  </br>
+  </br>
+<div class="container">
+	<!-- Edit main content here. -->
+	<h2>BACKGROUND</h2>
+	<p>The typical life of a Boston Globe user starts with anonymous casual visits and either continues as casual visits or transitions into paid subscribership. We conducted a study to help the Boston Globe understand the patterns in the life of a subscriber and use that knowledge to increase the rate of subscription. Our research goal was to develop a predictive model for the subscription process using web behavior data from the BostonGlobe.com property.</p>
+	
+	<p>We looked at the period between April 1 2014 to February 19 2015 as April 1 2014 marked a transition point for the Boston Globe newspaper website: the number of free articles was changed from 10 free article views per month down to 5 free article views per month. We selected 25,000 subscribers and sampled 30,000 non-subscribers from a total pool of 80 million non-subscribers. We randomly sampled an observation row out of 3.6 million rows from each of the subscribers and nonsubscribers. We selected 13 predictors to train the random forest classifier and trained them individually to ascertain goodness of fit. We separated features into static features and user behavior features (e.g. browsing habits) with one row per user. Instead of randomly sampling, we took the mode of each user’s static variable. We calculated the percentage of user content for each of the 21 different content categories.</p>
+	
+	<h2>Related Work</h2>
+
+	<p>As explained by Kumar et al. (2013), online publishers are faced with the dilemma of how much free material should be provided to website visitors. It stands to reason that providing more free content leads to increased visitors and hence increased viewings of banner advertising which provides additional digital advertising revenue. However, providing an abundance of free content results in fewer visitors being willing to pay for access and thus subscription revenue suffers. Online publishers thus need to find a happy medium between digital advertising revenue and subscription revenue: this brings us to the topic of paywall design.</p>
+
+	<p>Kumar et al. (2013) go on to classify online newspaper paywalls into two types: a ‘bulletproof’ paywall which strictly enforces free article viewing limits and a ‘leaky’ paywall which as the term implies has workarounds which technically savvy users can use to view articles over and above their actual entitlement. Newspaper editors are wary of bulletproof paywall designs as they limit unmetered views from social media websites in order to avoid falsified accesses. In doing so, newspapers can be left out of the social media discussion since social media users will tend to avoid linking to articles that only paid subscribers can view. Ultimately, this can result in the publication becoming increasingly irrelevant as other news sources take prominence. The ‘leaky’ paywall strategy however comes with its own concerns as the mechanism may work for a brief period of time until people work out how to ‘beat the system’. Further, users can get confused as to what counts as an article view (e.g. directly accessing an article) and what counts as an unmetered view (e.g. accessing an article via Facebook or Twitter).</p>
+	
+	<p>Kumar et al. (2013) explain that subverting the paywall can be seen as an ‘annoyance cost’ which can lead one to conclude a leaky paywall is the optimal strategy. In our case, if a visitor is interested in reading the Boston Globe beyond the free article allowance but does not want to pay for a subscription, the person will need to incur an ‘annoyance cost’ in circumventing the paywall mechanism (e.g. by going through social media to access an article, clearing their cookies). A light user who views six articles per month, i.e. one article more than the free viewing allowance, may be happy to incur this cost. In contrast, a heavy user who views 30 articles per month would incur this annoyance multiple times and is likely to subscribe in order to avoid this annoyance cost.</p>
+
+	<p>The Neiman Lab (2014) defines two key metrics to evaluate the effectiveness of an online newspaper paywall. The first is the stop rate which measures the percentage of our unique visitors that encounter the free article threshold. It is calculated as unique visitors hitting free article stop threshold divided by the number of unique visitors. Based on data from Press+, the average publication has a stop rate of 3% to 4%, but high performers stop between 5% to 10% of unique visitors. The second is the Stop Conversation Rate which measures sales as a proportion of stopped readers (readers who reach the threshold of free articles). The paid conversion rate includes just paid, digital-only subscriptions. It is calculated as paid subscription sales divided by unique visitors hitting free article stop threshold. Based on data from Press+, a Stop Conversion Rate of 0.5% is considered average, while high performers convert 1% to 2% of stops into paying subscribers.</p>
+
+</div>
+	
+
+<!-- Bootstrap core JavaScript. Placed at the end of the document so the pages load faster. -->
+<script src="./js/jquery-1.11.1.min.js"></script>
+<script src="./bootstrap-3.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
